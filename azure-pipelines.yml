@@ -4,7 +4,7 @@ stages:
   jobs:
   - job: Mac
     pool: 
-      name: Hosted Mac Internal
+      name: Hosted macOS
     steps:
     - powershell: Write-Host "##vso[task.setvariable variable=MacVariable;]HelloMac"
       displayName: Set Variable
