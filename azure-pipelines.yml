@@ -6,7 +6,7 @@ stages:
     pool: 
       vmImage: macOS-latest
     steps:
-    - powershell: Write-Host "##vso[task.setvariable variable=MacVariable;]HelloMac"
+    - powershell: Write-Host "##vso[task.setvariable variable=Mac.Variable;]HelloMac"
       displayName: Set Variable
 
   - job: Windows
@@ -14,5 +14,5 @@ stages:
     pool:
       vmImage: windows-latest
     steps:
-    - powershell: Write-Host $(MacVariable)
+    - powershell: Write-Host '$(Mac.Variable)'
       displayName: Get Variable
